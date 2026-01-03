@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# BioXP — Gene Expression Visualizer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+BioXP is a fullstack web application for uploading, visualizing, and saving gene expression datasets.  
+It allows users to explore biological CSV data through interactive tables, bar charts, and heatmaps, with projects saved for later access.
 
-## Available Scripts
+This project was built to practice full stack development, data visualization, and database integration.
 
-In the project directory, you can run:
+## Screenshots
 
-### `npm start`
+### Upload and Explore Datasets
+![Upload and Explore](screenshots/upload.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Gene Expression Bar Chart
+![Bar Chart](screenshots/barchart.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Heatmap Visualization
+![Heatmap](screenshots/heatmap.png)
 
-### `npm test`
+## Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Upload gene expression CSV files
+- Automatic parsing and validation of input data
+- Interactive bar charts and heatmaps
+- Tabular view of gene expression values
+- Save datasets and reload them later
+- Clean, modern UI built with Material UI 
+- Custom branding created on Canva
 
-### `npm run build`
+## Tech Stack
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Frontend
+- React
+- Material UI (MUI)
+- Recharts
+- Plotly.js
+- PapaParse
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Backend
+- Node.js
+- Express
+- Multer (file uploads)
+- PapaParse (CSV parsing)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Database & Storage
+- Supabase (PostgreSQL + file storage)
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Expected CSV Format
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The uploaded CSV file should follow this structure:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **First column:** `Gene` (gene identifiers)
+- **Remaining columns:** numeric sample values
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Example:
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```csv
+Gene,Sample1,Sample2
+TP53,12.4,9.1
+BRCA1,5.2,7.8
+EGFR,3.1,4.6
