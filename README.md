@@ -11,7 +11,7 @@ This project was built to practice full stack development, data visualization, a
 ![Upload and Explore](screenshots/upload.png)
 
 ### Gene Expression Bar Chart
-![Bar Chart](screenshots/barchart.png)
+![Bar Chart](screenshots/bargraph.png)
 
 ### Heatmap Visualization
 ![Heatmap](screenshots/heatmap.png)
